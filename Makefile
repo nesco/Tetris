@@ -12,6 +12,8 @@ all: $(EXEC)
 $(EXEC) : $(OBJ)
 	$(CC) $(FRAMEWORKS) -o $@ $^ $(LFLAGS)
 
+main.o: tetris.hpp
+
 %.o : %.cpp
 	$(CC) -o $@ -c $< $(CFLAGS) 
 
